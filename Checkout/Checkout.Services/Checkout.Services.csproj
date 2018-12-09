@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Checkout.Exceptions\Checkout.Exceptions.csproj" />
+    <ProjectReference Include="..\Checkout.Interfaces\Checkout.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Windsor.4.1.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Checkout.Interfaces\Checkout.Interfaces.csproj">
+      <Project>{e5b080d4-2352-4109-9e64-484cb76c8b67}</Project>
+      <Name>Checkout.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="Checkout.Repositories\Checkout.Repositories.csproj">
+      <Project>{326aaa09-886d-4264-883e-d4d570f2876a}</Project>
+      <Name>Checkout.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="Checkout.Services\Checkout.Services.csproj">
+      <Project>{f5610195-6e4e-479e-828a-0f90f4f401bf}</Project>
+      <Name>Checkout.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
